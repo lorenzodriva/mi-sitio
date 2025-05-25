@@ -1,0 +1,163 @@
+@import url("./globals.css");
+
+
+h2{
+    margin: 0;
+    color: var(--f-color);
+    text-shadow: 0 0 5px var(--t-color);
+    font-size: 28px;
+}
+
+.encabezado{
+    display: flex;
+    justify-content: space-around;
+}
+
+.encabezado>.bloque-espacio{
+    width: 30%;
+}
+
+.encabezado>h1{
+    width: 40%;
+    margin: 0 0 25px 0;
+    text-align: center;
+    color: var(--f-color);
+}
+
+section[class*="bloque"]{
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.encabezado>.bloque-buscador{
+    width: 30%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BUSCADOR --------------*/
+.buscador{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 100;
+    padding: 5px;
+}
+
+.buscador input{
+    all: unset;
+    text-align: start;
+    text-indent: 5px;
+}
+
+.buscador button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador button>img{
+    display: block;
+    width: 150%;
+    height: 150%;
+}
+/* ------------------------------------------- */
+
+@media (max-width: 650px){
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .encabezado>.bloque-espacio{
+        width: 0%;
+    }
+    .encabezado>.bloque-buscador{
+        width: 50%;
+    }
+    .encabezado h1{
+        width: 50%;
+    }
+}
+/* TRABAJOS - -----------------------------------*/
+
+.trabajos{
+    background-image: 
+    linear-gradient(to right, rgb(0, 0, 0, 1) 50%, rgb(0, 0, 0, 0.85) 100% ),
+        url(../img/foto-contacto.jpg);
+        background-position: right;
+    background-size: cover;
+
+    padding: 30px;
+}
+
+.bloque-tradicional{
+    background-color: var(--q-color);
+}
+
+.bloque-digital{
+    background-color: var(--s-color);
+}
+
+.bloque-comercial{
+    background-color: var(--x-color);
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card{
+    width: min-content;
+    height: min-content;
+    padding: 10px;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(2);
+    z-index: 100;
+}
+
+.card h3{
+    font-size: 12px;
+    margin: 8px 0 5px 0;
+}
+.card p{
+    font-size: 10px;
+    margin: 0;
+}
+
+.contenedor .card img{
+    border-radius: 10px;
+}
+
+.contenedor .card img[src*="-h"]{
+    width: 150px;
+    height: auto;
+}
+
+.contenedor .card img[src*="-v"]{
+    height: 115.952px;
+    width: auto;
+}
+
+.contenedor>button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: larger;
+    font-weight: bolder;
+}

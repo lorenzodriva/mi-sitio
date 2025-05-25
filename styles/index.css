@@ -1,0 +1,220 @@
+@import url("./globals.css");
+
+
+/* CONTENEDOR DE PRESENTACION ----------------------------------------------------------------------------*/
+
+.bloque-presentacion{
+    width: 100%;
+    display: flex;
+    color: var(--f-color);
+    text-shadow: 0 0 5px black;
+    background-color: #000001;
+}
+
+.bloque-presentacion>.bloque-espacio{
+    width: 30%;
+}
+
+.bloque-presentacion>.texto{
+    width: 70%;
+    margin: 6%;
+}
+
+
+@media (max-width: 600px) {
+    .bloque-presentacion{
+        background-image:
+            linear-gradient(to top,rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 0) 100%),
+            url(../img/foto-inicio.jpg);
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bloque-presentacion>.bloque-espacio{
+        width: 0%;
+    }
+    .bloque-presentacion>.texto{
+        width: 100%;
+        margin: 6%;
+    }
+}
+@media ( min-width: 601px) and (max-width: 924px) {
+    .bloque-presentacion{
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 1) 50%,  rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0) 100%),
+            url(../img/foto-inicio.jpg);
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width: 925px) {
+    .bloque-presentacion{
+        background-image:
+            linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0) 100%),
+            url(../img/foto-inicio.jpg);
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.bloque-presentacion>.texto>.encabezado{
+    height: min-content;
+    width: min-content;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 1px 0px;
+}  
+
+.bloque-presentacion>.texto>.encabezado>*{
+    margin: 0px;
+}
+
+.encabezado>p{
+    border-top: 2px solid var(--f-color);
+    width: 100%;
+    font-size: 23px;
+    text-align-last: justify;
+    
+}
+
+/* CONTENEDOR DE MUESTRAS ---------------------------------------------------------------------------------*/
+
+
+.bloque-muestras{
+    background-image: linear-gradient(rgb(126, 94, 64) 40%, rgb(166, 167, 114) 100%);
+    padding: 30px 0 0 0;
+    text-align: center;
+    text-shadow: 0 2px 1px var(--t-color);
+}
+
+.bloque-muestras>.contenedor{
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+}
+
+.bloque-muestras>h2{
+    margin: 0;
+    color: var(--f-color);
+    font-size: 35px;
+}
+
+.bloque-muestras button{
+    height: 60px;
+    width: 180px;
+    margin: 20px 0 35px 0;
+}
+
+.bloque-muestras .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.bloque-muestras .card>.imagen{
+    height:70%;
+    width: 100%;
+    
+    position: absolute;
+    bottom:0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.bloque-muestras .card:nth-child(1)> .imagen{
+    background-image: url(../img/muestras/graf.png);
+}
+.bloque-muestras .card:nth-child(2)> .imagen{
+    background-image: url(../img/muestras/dig.png);
+}
+.bloque-muestras .card:nth-child(3)> .imagen{
+    background-image: url(../img/muestras/commer.png);
+}
+.bloque-muestras .card:nth-child(4)> .imagen{
+    background-image: url(../img/muestras/hyc.png);
+}
+
+/* BLOQUE DESCRIPCION ----------------------------------------------------------------------------------------------*/
+
+.bloque-descripcion{
+    background-color: var(--p-color);
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bloque-descripcion>.bloque-espacio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 750px) {
+    .bloque-descripcion{
+        flex-wrap: wrap;
+    }
+    .bloque-descripcion>.bloque-espacio{
+        width: 100%;
+        margin: 15px 0 25px 0;
+    }
+    .bloque-descripcion>.texto{
+        width: 100%;
+        margin: 6%;
+    }
+}
+@media ( min-width: 751px) {
+    .bloque-descripcion>.bloque-espacio{
+        width: 40%;
+    }
+    .bloque-descripcion>.texto{
+        width: 60%;
+        margin: 6% 25px 6% 6%;
+    }
+    .bloque-descripcion>.bloque-espacio{
+        left: 0;
+    }
+}
+
+.titulo{
+    font-size: 30px;
+    color: var(--f-color);
+}
+
+.bloque-descripcion>.texto{
+    color: var(--s-color); 
+}
+
+.bloque-descripcion button{
+    height: 60px;
+    width: 180px;
+    margin: 20px 0 20px 0;
+}
+
+.bloque-descripcion>.texto>p{
+    margin: 0;
+}
+
+.bloque-descripcion>.bloque-espacio>.contenedor{
+    width: 250px;
+    height: 250px;
+
+    border: 3px solid var(--f-color);
+    border-radius: 50%; 
+    background-color: #000001;
+
+    background-image: url(../img/perfil.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+

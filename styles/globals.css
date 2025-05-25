@@ -1,0 +1,322 @@
+:root {
+    --p-color: #000001;
+    --s-color: rgb(115, 116, 71);
+    --t-color: #30220b;
+    --q-color: #917557;
+    --f-color: #f5e0ad;
+    --x-color: #965b3a;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* AJUSTES GLOBALES DE ELEMENTOS -------------------------------------------------------------------------*/
+h1{
+    font-size: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+main button{
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    color: var(--t-color);
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--f-color);
+    box-shadow: 0px 1px 9px var(--t-color);
+}
+
+main button:hover{
+    transform: scale(1.1);
+}
+
+li{
+    transition: 0.3s linear;
+}
+
+li:hover{
+    transform: scale(1.1)
+}
+
+*[class*="bloque"]{
+    scroll-margin-top: 75px;
+}
+
+textarea{
+    all: unset;
+}
+
+/* HEADER -------------------------------------------------------------------------*/
+
+header{
+    top:0;
+    position: sticky;
+    z-index: 1000;
+    box-shadow: 0 -2px 12px black;
+}
+
+nav{
+    width: 100%;   
+    
+    background-color: var(--f-color);
+    color: var(--t-color);
+    
+    margin: 0;
+    padding: 26px 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 1s;
+}
+
+/* -------LOGO FIRMA INICIO------------ */
+
+#firma-logo{
+    width: 20px;
+    height: auto;
+    scale: 3;
+}
+
+nav>section{
+    width: 20%;
+    display:flex;
+    justify-content: center;
+}
+
+nav>section img{
+    cursor: pointer;
+    transition: 1s;
+}
+
+nav>section img:hover{
+    transform: scale(1.15);
+}
+
+/* -------LISTA OPCIONES------------ */
+
+nav>ul{
+    width: 60%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin:0;
+    font-weight: 500;
+    font-size: large;
+}
+
+/* -------DESPLEGABLE------------ */
+
+.desplegable{
+    border: none;
+    background: none;
+    text-align: center;
+    position: relative;
+    padding-bottom: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desplegable>img{
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.desplegable>.contenido{
+    display: none;
+    background-color: var(--f-color);
+    border-radius: 10px;
+    position: absolute;
+    font-weight: 500;
+    z-index: 100;
+    padding: 10px;
+    top: 100%;
+    box-shadow: 0 8px 7px black;
+}
+
+.desplegable>.contenido article{
+    padding: 20px;
+}
+
+.desplegable:hover > .contenido{
+    display: block;
+}
+
+
+@media (max-width: 499px){
+    nav>ul{
+        display: none;
+        width: 0%;
+    }
+    nav section{
+        width: 50%;
+    }
+}
+
+@media (min-width: 500px){
+    .desplegable{
+        display: none;
+    }
+}
+
+/* MAIN -------------------------------------------------------------------------*/
+
+.texto-importante{
+    font-weight: bold;
+    font-size: large;
+}
+
+.texto>.cuerpo{
+    font-size: medium;
+}
+
+.botones button{
+    margin: 20px 20px 20px 0;
+}
+
+.card{
+    height: 225px;
+    width: 275px;
+    border: 0;
+    border-radius: 12px;
+    
+    box-shadow: 0px 1px 9px var(--t-color);
+    background-color: var(--f-color);
+
+    color: #30220b;
+    text-shadow: none;
+
+    transition: 1.1s;
+}
+
+.card:hover{
+    transform: scale(1.15);
+}
+
+
+/* ---- BLOQUE TEXTO DESCRIPCION Y BLOQUE EXTRA (FOTOS O OTROS) -----*/
+
+.bloque-descripcion{
+    background-color: var(--p-color);
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bloque-descripcion>.bloque-espacio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 750px) {
+    .bloque-descripcion{
+        flex-wrap: wrap;
+    }
+    .bloque-descripcion>.bloque-espacio{
+        width: 100%;
+        margin: 15px 0 25px 0;
+    }
+    .bloque-descripcion>.texto{
+        width: 100%;
+        margin: 6%;
+    }
+}
+@media ( min-width: 751px) {
+    .bloque-descripcion>.bloque-espacio{
+        width: 40%;
+    }
+    .bloque-descripcion>.texto{
+        width: 60%;
+        margin: 6% 25px 6% 6%;
+    }
+    .bloque-descripcion>.bloque-espacio{
+        left: 0;
+    }
+}
+
+.bloque-descripcion>.texto{
+    color: var(--s-color); 
+}
+.titulo{
+    font-size: 30px;
+    color: var(--f-color);
+}
+
+
+.bloque-descripcion button{
+    height: 60px;
+    width: 180px;
+    margin: 20px 0 20px 0;
+}
+
+.bloque-descripcion>.texto>p{
+    margin: 0;
+}
+
+
+/* FOOTER -------------------------------------------------------------------------*/
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: var(--s-color);
+
+    display: flex;
+    align-items: center;
+}
+
+footer>.redes{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer>.redes a .logo{
+    width: 33px;
+    height: 33px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transition: all 0.3s;
+}
+
+footer>.redes a:nth-child(1) .logo{
+    background-image: url(../img/svg/logo-ig.svg);
+}
+
+footer>.redes a:nth-child(2) .logo{
+
+    background-image: url(../img/svg/logo-whatsapp.svg);
+}
+footer>.redes a:nth-child(3) .logo{
+    background-image: url(../img/svg/logo-lin.svg);
+}
+
+footer>.redes a .logo:hover{
+    transform: rotate(20deg);
+    filter: brightness(1.3);
+}

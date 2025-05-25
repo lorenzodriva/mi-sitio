@@ -1,0 +1,111 @@
+@import url("./globals.css");
+
+h2{
+    margin: 0 0 20px 0;
+}
+h3{
+    margin: 20px 0 10px 0;
+}
+
+/* BLOQUE DESCRIPCION ---------------------------------------------------------*/
+
+.bloque-descripcion{
+    background-image: 
+    linear-gradient(to right, rgb(0, 0, 0, 1) 50%, rgb(0, 0, 0, 0.85) 100% ),
+        url(../img/foto-contacto.jpg);
+        background-position: right;
+    background-size: cover;
+}
+.bloque-espacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 80px;
+}
+.bloque-espacio .card{
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--s-color);
+}
+.bloque-espacio .card img{
+    width: 70px;
+    height: 70px;
+}
+
+
+/* BLOQUE PEDIDO -------------------------------------------------------------*/ 
+
+.contenedor{
+    width: 100%;
+    background-color: var(--q-color);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+    color: var(--t-color);
+}
+.bloque-pedido{
+    padding: 6%;
+    width: 380px;
+    background-color: var(--f-color);
+    border-radius: 30px;
+    box-shadow: 0 0 10px var(--t-color);
+}
+
+.bloque-pedido input[type*="email"] , .bloque-pedido input[type*="text"]{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    text-indent: 10px;
+}
+
+.bloque-pedido input[type*="email"]:focus , .bloque-pedido input[type*="text"]:focus{
+    outline: 2px solid var(--q-color);
+}
+
+.tipo label{
+    padding: 5px 6px 5px 7px;
+    border-radius: 10px;
+    color: var(--f-color);
+    background-color: var(--t-color);
+    margin: 0 10px 0 0;
+}
+
+.descripcion{
+    background-color: white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px 0 20px 0;
+}
+
+.descripcion>textarea{
+    width: 100%;
+}
+
+input[type="submit"]{
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    color: var(--f-color);
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--s-color);
+    box-shadow: 0px 1px 9px var(--t-color);
+}
+
+input[type="submit"]:hover{
+    transform: scale(1.1);
+
+}
